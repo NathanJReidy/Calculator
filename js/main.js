@@ -1,21 +1,24 @@
 // Create variables for elements that need to be clicked/changed
-let clear = document.querySelector("#textClear");
-let zero = document.querySelector("#textZero");
-let point = document.querySelector("#textPoint");
-let equals = document.querySelector("#textEquals");
-let plus = document.querySelector("#textPlus");
-let one = document.querySelector("#textOne");
-let two = document.querySelector("#textTwo");
-let three = document.querySelector("#textThree");
-let subtract = document.querySelector("#textSubtract");
-let four = document.querySelector("#textFour");
-let five = document.querySelector("#textFive");
-let six = document.querySelector("#textSix");
-let multiply = document.querySelector("#textMultiply");
-let seven = document.querySelector("#textSeven");
-let eight = document.querySelector("#textEight");
-let nine = document.querySelector("#textNine");
-let divide = document.querySelector("#textDivide");
+let vClear = document.querySelector('#clearButton');
+let vZero = document.querySelector("#zero");
+let vPoint = document.querySelector("#point");
+let vEquals = document.querySelector("#equals");
+let vPlus = document.querySelector("#plus");
+let vOne = document.querySelector("#one");
+let vTwo = document.querySelector("#two");
+let vThree = document.querySelector("#three");
+let vSubtract = document.querySelector("#subtract");
+let vFour = document.querySelector("#four");
+let vFive = document.querySelector("#five");
+let vSix = document.querySelector("#six");
+let vMultiply = document.querySelector("#multiply");
+let vSeven = document.querySelector("#seven");
+let vEight = document.querySelector("#eight");
+let vNine = document.querySelector("#nine");
+
+let vScreen = document.querySelector("#textScreenNum");
+
+vClear.addEventListener('click', () => vScreen.textContent = "0");
 
 
 
