@@ -4,8 +4,8 @@ const operationBtns = document.querySelectorAll('.sidegridnum');
 const equalsBtn = document.querySelector('#equals');
 const clearBtn = document.querySelector('#clearButton');
 const screenBtn = document.querySelector('.screennum');
-const previousNum = 0;
-const currentNum = 0;
+const previousNum = "";
+const currentNum = "";
 
 class Calculator {
     constructor(previousNum, currentNum) {
@@ -23,7 +23,8 @@ class Calculator {
     }
 
     appendNumber(number) {
-
+        if ((number.includes('.')) && (this.currentNum.includes('.'))) return
+        this.currentNum = this.currentNum.toString() + number.toString();
     }
 
     chooseOperation(operation) {
@@ -35,7 +36,7 @@ class Calculator {
     }
 
     updateDisplay() {
-
+        screenBtn.textContent = this.currentNum;
     }
 }
 
@@ -47,6 +48,7 @@ numberBtns.forEach(button => {
         button.addEventListener('click', () => {
             calculator.appendNumber(button.textContent);
             calculator.updateDisplay();
+            //console.log(typeof(button.textContent))
         })
     }
 })
