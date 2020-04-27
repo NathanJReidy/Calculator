@@ -14,6 +14,7 @@ class Calculator {
     }
 
     clear() {
+        screenBtn.textContent = "";
 
     }
 
@@ -38,26 +39,37 @@ class Calculator {
     }
 }
 
+const calculator = new Calculator(previousNum, currentNum);
+
+
+numberBtns.forEach(button => {
+    if (button != document.querySelector('#equals')) {
+        button.addEventListener('click', () => {
+            calculator.appendNumber(button.textContent);
+            calculator.updateDisplay();
+        })
+    }
+})
 
 
 
-function add(a, b) {
-	return a + b;
-  }
+// function add(a, b) {
+// 	return a + b;
+//   }
   
-function subtract(a, b) {
-	return a - b;
-  }
+// function subtract(a, b) {
+// 	return a - b;
+//   }
   
-function sum(array) {
-	return array.reduce((total, current) => total + current, 0);
-  }
+// function sum(array) {
+// 	return array.reduce((total, current) => total + current, 0);
+//   }
   
-function multiply(array) {
-	return array.length
-	    ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
-		: 0;
-  }
+// function multiply(array) {
+// 	return array.length
+// 	    ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
+// 		: 0;
+//   }
   
 
 
