@@ -1,34 +1,34 @@
 // Create variables for elements that need to be clicked/changed
 const numberBtns = document.querySelectorAll('.maingridnum');
 const operationBtns = document.querySelectorAll('.sidegridnum');
-const equalsBtn = document.querySelector('.equalsButton');
-const clearBtn = document.querySelector('.clearButtonClass');
+const equalsBtn = document.querySelector('#equals');
+const clearBtn = document.querySelector('#clearButton');
 const screenBtn = document.querySelector('.screennum');
 
 
 
-let vClear = document.querySelector('#clearButton');
-let vZero = document.querySelector("#zero");
-let vPoint = document.querySelector("#point");
-let vEquals = document.querySelector("#equals");
-let vPlus = document.querySelector("#plus");
-let vOne = document.querySelector("#one");
-let vTwo = document.querySelector("#two");
-let vThree = document.querySelector("#three");
-let vSubtract = document.querySelector("#subtract");
-let vFour = document.querySelector("#four");
-let vFive = document.querySelector("#five");
-let vSix = document.querySelector("#six");
-let vMultiply = document.querySelector("#multiply");
-let vSeven = document.querySelector("#seven");
-let vEight = document.querySelector("#eight");
-let vNine = document.querySelector("#nine");
+// let vClear = document.querySelector('#clearButton');
+// let vZero = document.querySelector("#zero");
+// let vPoint = document.querySelector("#point");
+// let vEquals = document.querySelector("#equals");
+// let vPlus = document.querySelector("#plus");
+// let vOne = document.querySelector("#one");
+// let vTwo = document.querySelector("#two");
+// let vThree = document.querySelector("#three");
+// let vSubtract = document.querySelector("#subtract");
+// let vFour = document.querySelector("#four");
+// let vFive = document.querySelector("#five");
+// let vSix = document.querySelector("#six");
+// let vMultiply = document.querySelector("#multiply");
+// let vSeven = document.querySelector("#seven");
+// let vEight = document.querySelector("#eight");
+// let vNine = document.querySelector("#nine");
 
-let vScreen = document.querySelector("#textScreenNum");
+// let vScreen = document.querySelector("#textScreenNum");
 
-// Create variables to store current total and current number 
-let currentTotal = 0;
-let currentNum = 0;
+// // Create variables to store current total and current number 
+// let currentTotal = 0;
+// let currentNum = 0;
 
 // Create event listeners
 
