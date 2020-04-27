@@ -1,4 +1,12 @@
 // Create variables for elements that need to be clicked/changed
+const numberBtns = document.querySelectorAll('.maingridnum');
+const operationBtns = document.querySelectorAll('.sidegridnum');
+const equalsBtn = document.querySelector('.equalsButton');
+const clearBtn = document.querySelector('.clearButtonClass');
+const screenBtn = document.querySelector('.screennum');
+
+
+
 let vClear = document.querySelector('#clearButton');
 let vZero = document.querySelector("#zero");
 let vPoint = document.querySelector("#point");
@@ -42,6 +50,12 @@ vZero.addEventListener('click', function () {
 //     calculate(); 
 // })
 
+// vPlus.addEventListener('click', function () {
+
+//     add(); 
+// })
+
+
 vOne.addEventListener('click', function () {
     vScreen.textContent = "1";
     currentNum = 1; 
@@ -62,14 +76,45 @@ vThree.addEventListener('click', function () {
 //     subtract(); 
 // })
 
-
-vZero.addEventListener('click', function () {
-    vScreen.textContent = "0";
-    currentNum = 0; 
+vFour.addEventListener('click', function () {
+    vScreen.textContent = "4";
+    currentNum = 4; 
 })
 
+vFive.addEventListener('click', function () {
+    vScreen.textContent = "5";
+    currentNum = 5; 
+})
 
+vSix.addEventListener('click', function () {
+    vScreen.textContent = "6";
+    currentNum = 6; 
+})
 
+//Fix this
+// vMultiply.addEventListener('click', function () {
+//     multiply(); 
+// })
+
+vSeven.addEventListener('click', function () {
+    vScreen.textContent = "7";
+    currentNum = 7; 
+})
+
+vEight.addEventListener('click', function () {
+    vScreen.textContent = "8";
+    currentNum = 8; 
+})
+
+vNine.addEventListener('click', function () {
+    vScreen.textContent = "9";
+    currentNum = 9; 
+})
+
+//Fix this
+// vDivide.addEventListener('click', function () {
+//     divide(); 
+// })
 
 
 function add(a, b) {
