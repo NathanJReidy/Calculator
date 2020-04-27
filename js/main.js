@@ -4,6 +4,39 @@ const operationBtns = document.querySelectorAll('.sidegridnum');
 const equalsBtn = document.querySelector('#equals');
 const clearBtn = document.querySelector('#clearButton');
 const screenBtn = document.querySelector('.screennum');
+const previousNum = 0;
+const currentNum = 0;
+
+class Calculator {
+    constructor(previousNum, currentNum) {
+        this.previousNum = previousNum;
+        this.currentNum = currentNum;
+    }
+
+    clear() {
+
+    }
+
+    delete() {
+
+    }
+
+    appendNumber(number) {
+
+    }
+
+    chooseOperation(operation) {
+
+    }
+
+    compute() {
+
+    }
+
+    updateDisplay() {
+
+    }
+}
 
 
 
