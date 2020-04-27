@@ -7,6 +7,28 @@ const screenBtn = document.querySelector('.screennum');
 
 
 
+
+function add(a, b) {
+	return a + b;
+  }
+  
+function subtract(a, b) {
+	return a - b;
+  }
+  
+function sum(array) {
+	return array.reduce((total, current) => total + current, 0);
+  }
+  
+function multiply(array) {
+	return array.length
+	    ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
+		: 0;
+  }
+  
+
+
+
 // let vClear = document.querySelector('#clearButton');
 // let vZero = document.querySelector("#zero");
 // let vPoint = document.querySelector("#point");
@@ -32,106 +54,86 @@ const screenBtn = document.querySelector('.screennum');
 
 // Create event listeners
 
-vClear.addEventListener('click', () => vScreen.textContent = "0");
+// vClear.addEventListener('click', () => vScreen.textContent = "0");
 
-vZero.addEventListener('click', function () {
-    vScreen.textContent = "0";
-    currentNum = 0; 
-})
-
-// This complicates things significantly, because the screen text needs to change 
-// vPoint.addEventListener('click', function () {
+// vZero.addEventListener('click', function () {
 //     vScreen.textContent = "0";
 //     currentNum = 0; 
 // })
 
-//Need to create calculate function or display final calculation result (currentTotal?)
-// vEquals.addEventListener('click', function () {
-//     calculate(); 
+// // This complicates things significantly, because the screen text needs to change 
+// // vPoint.addEventListener('click', function () {
+// //     vScreen.textContent = "0";
+// //     currentNum = 0; 
+// // })
+
+// //Need to create calculate function or display final calculation result (currentTotal?)
+// // vEquals.addEventListener('click', function () {
+// //     calculate(); 
+// // })
+
+// // vPlus.addEventListener('click', function () {
+
+// //     add(); 
+// // })
+
+
+// vOne.addEventListener('click', function () {
+//     vScreen.textContent = "1";
+//     currentNum = 1; 
 // })
 
-// vPlus.addEventListener('click', function () {
-
-//     add(); 
+// vTwo.addEventListener('click', function () {
+//     vScreen.textContent = "2";
+//     currentNum = 2; 
 // })
 
-
-vOne.addEventListener('click', function () {
-    vScreen.textContent = "1";
-    currentNum = 1; 
-})
-
-vTwo.addEventListener('click', function () {
-    vScreen.textContent = "2";
-    currentNum = 2; 
-})
-
-vThree.addEventListener('click', function () {
-    vScreen.textContent = "3";
-    currentNum = 3; 
-})
-
-//Fix this
-// vSubtract.addEventListener('click', function () {
-//     subtract(); 
+// vThree.addEventListener('click', function () {
+//     vScreen.textContent = "3";
+//     currentNum = 3; 
 // })
 
-vFour.addEventListener('click', function () {
-    vScreen.textContent = "4";
-    currentNum = 4; 
-})
+// //Fix this
+// // vSubtract.addEventListener('click', function () {
+// //     subtract(); 
+// // })
 
-vFive.addEventListener('click', function () {
-    vScreen.textContent = "5";
-    currentNum = 5; 
-})
+// vFour.addEventListener('click', function () {
+//     vScreen.textContent = "4";
+//     currentNum = 4; 
+// })
 
-vSix.addEventListener('click', function () {
-    vScreen.textContent = "6";
-    currentNum = 6; 
-})
+// vFive.addEventListener('click', function () {
+//     vScreen.textContent = "5";
+//     currentNum = 5; 
+// })
+
+// vSix.addEventListener('click', function () {
+//     vScreen.textContent = "6";
+//     currentNum = 6; 
+// })
 
 //Fix this
 // vMultiply.addEventListener('click', function () {
 //     multiply(); 
 // })
 
-vSeven.addEventListener('click', function () {
-    vScreen.textContent = "7";
-    currentNum = 7; 
-})
+// vSeven.addEventListener('click', function () {
+//     vScreen.textContent = "7";
+//     currentNum = 7; 
+// })
 
-vEight.addEventListener('click', function () {
-    vScreen.textContent = "8";
-    currentNum = 8; 
-})
+// vEight.addEventListener('click', function () {
+//     vScreen.textContent = "8";
+//     currentNum = 8; 
+// })
 
-vNine.addEventListener('click', function () {
-    vScreen.textContent = "9";
-    currentNum = 9; 
-})
+// vNine.addEventListener('click', function () {
+//     vScreen.textContent = "9";
+//     currentNum = 9; 
+// })
 
 //Fix this
 // vDivide.addEventListener('click', function () {
 //     divide(); 
 // })
-
-
-function add(a, b) {
-	return a + b;
-  }
-  
-function subtract(a, b) {
-	return a - b;
-  }
-  
-function sum(array) {
-	return array.reduce((total, current) => total + current, 0);
-  }
-  
-function multiply(array) {
-	return array.length
-	    ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
-		: 0;
-  }
-  
