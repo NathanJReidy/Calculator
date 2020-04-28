@@ -8,6 +8,13 @@ const previousNum = "";
 const currentNum = "";
 const topRowSelector = document.querySelector('#topRow');
 
+// Create variables to select operations text
+let plusText = document.querySelector("#plus").textContent;
+let subtractText = document.querySelector("#subtract").textContent;
+let multiplyText = document.querySelector("#multiply").textContent;
+let divideText = document.querySelector('#textDivide').textContent;
+
+
 class Calculator {
     constructor(previousNum, currentNum) {
         this.previousNum = previousNum;
@@ -40,7 +47,29 @@ class Calculator {
     }
 
     compute() {
-
+        let computation;
+        const prev = parseFloat(this.previousNum);
+        const current = parseFloat(this.currentNum);
+        if (isNaN(prev) || isNaN(current)) return;
+        switch (this.operation) {
+            case plusText:
+                computation = prev + current;
+                break;
+            case subtractText:
+                computation = prev - current;
+                break;
+            case multiplyText:
+                computation = prev * current;
+                break;
+            case divideText:
+                computation = prev / current;
+                break;
+            default:
+                return;
+        }
+        this.currentNum = computation
+        this.operation = undefined
+        this.previousNum = ""
     }
 
     updateDisplay() {
@@ -69,6 +98,13 @@ operationBtns.forEach(button => {
     })
 })
 
+equalsBtn.addEventListener('click', button => {
+    calculator.compute();
+    calculator.updateDisplay();
+})
+
+
+
 
 
 // function add(a, b) {
@@ -89,6 +125,7 @@ operationBtns.forEach(button => {
 // 		: 0;
 //   }
   
+
 
 
 
