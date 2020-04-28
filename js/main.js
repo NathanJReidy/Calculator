@@ -14,7 +14,6 @@ let subtractText = document.querySelector("#subtract").textContent;
 let multiplyText = document.querySelector("#multiply").textContent;
 let overText = document.querySelector('#divide').textContent;
 
-//THE DIVIDE FUNCTION IN THE SWITCH STATEMENT IS NOT BEING TRIGGERED FOR SOME REASON. IS THERE SOMETHING WRONG WITH OVERTEXT QUERY SELECTOR FOR IT???
 
 class Calculator {
     constructor(previousNum, currentNum) {
@@ -26,9 +25,14 @@ class Calculator {
         this.currentNum = "";
     }
 
+// This is appending the correct numbers to the screen, but it's not all appearing as one number. E.g. if you console.log(this.currentNum), the nums appear on separate lines.
+// Either something is wrong with appendNumber(number) function, or something is fundamentally wrong elsewhere. Eitherway, the full number isn't being used at the moment in the calcs,
+// so any two digit calcs do not currently work.
+
     appendNumber(number) {
         if ((number.includes('.')) && (this.currentNum.includes('.'))) return
         this.currentNum = this.currentNum.toString() + number.toString();
+        console.log(this.currentNum);
     }
 
     chooseOperation(operation) {
