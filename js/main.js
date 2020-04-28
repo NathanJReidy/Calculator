@@ -53,6 +53,14 @@ numberBtns.forEach(button => {
     }
 })
 
+operationBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.chooseOperation(button.textContent);
+        calculator.updateDisplay();
+        //console.log(typeof(button.textContent))
+    })
+})
+
 
 
 // function add(a, b) {
