@@ -12,8 +12,9 @@ const topRowSelector = document.querySelector('#topRow');
 let plusText = document.querySelector("#plus").textContent;
 let subtractText = document.querySelector("#subtract").textContent;
 let multiplyText = document.querySelector("#multiply").textContent;
-let divideText = document.querySelector('#textDivide').textContent;
+let overText = document.querySelector('#divide').textContent;
 
+//THE DIVIDE FUNCTION IN THE SWITCH STATEMENT IS NOT BEING TRIGGERED FOR SOME REASON. IS THERE SOMETHING WRONG WITH OVERTEXT QUERY SELECTOR FOR IT???
 
 class Calculator {
     constructor(previousNum, currentNum) {
@@ -22,8 +23,7 @@ class Calculator {
     }
 
     clear() {
-        screenBtn.textContent = "";
-
+        this.currentNum = "";
     }
 
     delete() {
@@ -51,6 +51,7 @@ class Calculator {
         const prev = parseFloat(this.previousNum);
         const current = parseFloat(this.currentNum);
         if (isNaN(prev) || isNaN(current)) return;
+
         switch (this.operation) {
             case plusText:
                 computation = prev + current;
@@ -61,19 +62,24 @@ class Calculator {
             case multiplyText:
                 computation = prev * current;
                 break;
-            case divideText:
+            case overText:
                 computation = prev / current;
                 break;
             default:
                 return;
         }
-        this.currentNum = computation
-        this.operation = undefined
-        this.previousNum = ""
+
+        this.currentNum = computation;
+        this.operation = undefined;
+        this.previousNum = "";
+        //console.log(this.currentNum);
     }
 
     updateDisplay() {
         screenBtn.textContent = this.currentNum;
+        //if (this.operation != null) {
+            //screenBtn.textContent = this.previousNum + this.operation;
+        //}
     }
 }
 
@@ -94,7 +100,6 @@ operationBtns.forEach(button => {
     button.addEventListener('click', () => {
         calculator.chooseOperation(button.textContent);
         calculator.updateDisplay();
-        //console.log(typeof(button.textContent))
     })
 })
 
@@ -103,6 +108,10 @@ equalsBtn.addEventListener('click', button => {
     calculator.updateDisplay();
 })
 
+clearBtn.addEventListener('click', button => {
+    calculator.clear();
+    calculator.updateDisplay();
+})
 
 
 
