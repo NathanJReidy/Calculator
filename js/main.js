@@ -6,6 +6,7 @@ const clearBtn = document.querySelector('#clearButton');
 const screenBtn = document.querySelector('.screennum');
 const previousNum = "";
 const currentNum = "";
+const topRowSelector = document.querySelector('#topRow');
 
 class Calculator {
     constructor(previousNum, currentNum) {
@@ -28,6 +29,13 @@ class Calculator {
     }
 
     chooseOperation(operation) {
+        if (this.currentNum === "") return
+        if (this.previousNum !== "") {
+            this.compute();
+        }
+        this.operation = operation;
+        this.previousNum = this.currentNum;
+        this.currentNum = "";
 
     }
 
