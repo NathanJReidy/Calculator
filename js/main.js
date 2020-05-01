@@ -13,6 +13,7 @@ let plusText = document.querySelector("#plus").textContent;
 let subtractText = document.querySelector("#subtract").textContent;
 let multiplyText = document.querySelector("#multiply").textContent;
 let overText = document.querySelector('#divide').textContent;
+let pointText = document.querySelector('#point').textContent;
 
 
 class Calculator {
@@ -25,13 +26,18 @@ class Calculator {
         this.currentNum = "";
     }
 
-// This is appending the correct numbers to the screen, but it's not all appearing as one number. E.g. if you console.log(this.currentNum), the nums appear on separate lines.
-// Either something is wrong with appendNumber(number) function, or something is fundamentally wrong elsewhere. Eitherway, the full number isn't being used at the moment in the calcs,
-// so any two digit calcs do not currently work.
-
     appendNumber(number) {
-        if ((number.includes('.')) && (this.currentNum.includes('.'))) return
-        this.currentNum = this.currentNum.toString() + number.toString();
+        if ((number.includes('.')) && (this.currentNum.includes('.'))) return;
+        // else if (number == pointText) {
+        //     // this.currentNum = this.currentNum.toString() + number.toString();
+        //     this.currentNum = parseInt(this.currentNum) + number;
+        //     console.log("ELSE IF TRIGGERED!");
+        //     console.log(typeof(number));
+        //     console.log(typeof(currentNum));
+        //     console.log("Current num is: " + this.currentNum);
+        else {
+            this.currentNum = this.currentNum + parseInt(number);  
+        }
         console.log(this.currentNum);
     }
 
